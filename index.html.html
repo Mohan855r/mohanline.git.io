@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>lin2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <span  style="font-size: 25px;
+    position: absolute;top: 90px;">Turning Score</span>
+    <span style="font-size: 35px;position: absolute;right: 240px;top:80px;font-weight: bold;">72.91</span>
+    <canvas id="graph" style="width:100%;max-width:600px;"></canvas>
+   
+   <script>  <!-- script star1 -->
+        const xData = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',];
+        const yData = [0, 0, 12,12,12,12,12,7, 0, 0, 0, 0,];
+        new Chart("graph", {
+            type:"line",
+            data:{
+                labels:xData,  
+                datasets:[{
+                    lineTension:0,
+                    backgroundColor:"red",
+                    borderColor:"blue",
+                    data:yData,
+                    pointRadius: 0
+
+                }] 
+            },
+            options:{
+                legend:{display:false},
+                
+                scales:{
+                    yAxes:[{ticks:{min:0,max:30},display:false}],
+                    xAxes: [{ display: false }]
+
+                }
+            }            
+        });
+   </script><!-- script start1 -->
+   
+</body>
+</html>
